@@ -1,0 +1,50 @@
+/* 
+    --- Cores ---
+
+    #2686C7 - Azul
+    #113564 - Azul escuro
+    #2CB29F - Verde
+    #FF8A00 - Laranja
+    #E4E4E4 - Cinza
+
+    #FCFCFC - Claro
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    /* PRINCIPAIS */
+    --destaque_escuro:  #113564;
+    --destaque: #2686C7;
+    --destaque_claro: #2CB29F;
+    --destaque_claro2: #FF8A00;
+
+    --destaque_shadow2: #ca6c01;
+
+    --cinza: #E4E4E4;
+    --cinza_escuro: #c4c4c4;
+
+    --claro: #FCFCFC;
+    --escuro: #262626;
+    --preto_opc: #00000066;
+
+    --background: #FFFFFF;
+}
+
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+#conteudo{
+    margin: 0.5rem;
+}

@@ -1,0 +1,471 @@
+@import url(main-style.css);
+
+.topo {
+  box-sizing: border-box; /* Quando não se usa o box-sizing, o padding soma com a altura, porém quando utilizado, ele vai manter a altura em pixels*/
+  background-color: var(--destaque_escuro);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--claro);
+  overflow: hidden;
+}
+
+#logo {
+  margin-left: 2rem;
+  padding: 0.5rem;
+  height: 70px;
+}
+#logo img {
+  height: 3.5rem;
+}
+
+.topo ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  align-items: center;
+}
+.topo a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: var(--claro);
+}
+.topo a:hover {
+  transition: 0.3s;
+  color: var(--destaque_claro);
+  background: var(--destaque_escuro);
+  box-shadow: 5px 5px var(--destaque_claro);
+}
+
+.topo{
+  color: var(--destaque_claro);
+  font-size: 1.3rem;
+  box-shadow: none;
+}
+
+#menu {
+  display: flex;
+  gap: 1rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btt_mobile {
+  display: none;
+  color: var(--destaque);
+}
+
+article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.texto {
+  display: flex;
+  padding: 1rem 2rem;
+  flex-flow: column wrap;
+  gap: 0.3rem;
+  max-width: 25rem;
+}
+.texto h1{
+  margin: 0;
+  font-size: 2.38rem;
+  font-weight: 800;
+}
+
+.grupo, .home{
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.grupo {
+  margin: 0 1rem;
+}
+.home{
+  justify-content: space-evenly;
+}
+
+article a{
+  width: 100%;
+  max-width: 25rem;
+}
+#img_home {
+  width: 100%;
+  border: 0.5rem solid var(--destaque_claro2);
+  border-radius: 50rem;
+  background-color: var(--claro);
+}
+
+#form-local article{
+  justify-content: center;
+  gap: 1rem;
+}
+
+#form-local article, #form-local section{
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#form-local section, .bloco{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.borda{
+  border: 0.1rem outset var(--destaque_claro);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.bloco, .bloco_locais{
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.bloco {
+  display: flex;
+  background-color: var(--destaque);
+  flex-flow: column wrap;
+  margin: 3rem auto;
+  width: 90vw;
+  gap: 2rem;
+}
+.bloco div span, #form-local section div span{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bloco div, #form-local section div {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  width:fit-content;
+}
+.grupo_btt{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+form input[type="text"], form input[type="password"], form input[type="time"], form input[type="date"], form select{
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 2rem;
+}
+
+#form-local label, #form-local .title{
+  color: var(--claro); 
+}
+.title{
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--destaque_claro);
+}
+
+.modal {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: var(--preto_opc);
+}
+.icon {
+  color: var(--claro);
+  transition: 0.3s;
+  font-size: 1.4rem;
+}
+.icon:hover {
+  color: var(--cinza);
+  cursor: pointer;
+}
+
+.tabela_pesquisa{
+  display: flex;
+  flex-flow: row-reverse wrap;
+  gap: 1rem;
+}
+#pesquisa, .retorna{
+  width: 15rem;
+}
+#pesquisa{
+  display: flex;
+  z-index: 2;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background-color: var(--cinza);
+  border-bottom: 0.2rem solid var(--preto_opc);
+}
+.retorna{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 9.5rem;
+  border-radius: 0 0 2rem 2rem;
+  background-color: var(--cinza_escuro);
+  padding: 0.5rem;
+}
+.retorna li{
+  list-style: none;
+}
+
+.buscar{
+  display: flex;
+  align-content: flex-end;
+  flex-flow: column wrap;
+}
+#form-pesquisa{
+  display: flex;
+  flex-direction: row;
+}
+
+.table-locais{
+  width: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.img_tipo{
+  width: 7rem;
+}
+
+.bloco_locais{
+  display:flex;
+  background-color: var(--cinza); 
+  height: fit-content;
+  width: 40rem;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  align-items: center;
+}
+.bloco_locais .title{
+  font-size: 1.5rem;
+  text-decoration: underline solid;
+  color: var(--destaque);
+}
+.bloco_locais d{
+  font-weight: bold;
+  color: var(--destaque_claro);
+}
+.bloco_locais section{
+  display: flex;
+  padding: 0.5rem;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+
+
+.btt {
+  height: fit-content;
+  background-color: var(--destaque_claro2);
+  color: var(--claro);
+  cursor: pointer;
+  padding: 1rem;
+  border-style: none;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: 0.3s;
+  box-shadow: 0 0.3rem var(--destaque_shadow2);
+  transform: translateY(-0.25em);
+}
+.btt:hover {
+  background-color: var(--destaque_shadow2);
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/*
+  320px — 480px: Mobile devices
+  481px — 768px: iPads, Tablets
+  769px — 1024px: Small screens, laptops
+  1025px — 1200px: Desktops, large screens
+*/
+@media (max-width: 1025){
+  
+}
+
+@media (max-width: 769px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    height: 0px;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden; /* Impede que o texto apareça antes da animação */
+    background: var(--destaque_escuro);
+  }
+
+  #menu a {
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    margin: 0;
+    border-bottom: 2px solid var(--destaque);
+    box-shadow: none;
+  }
+
+  #navbar.active #menu {
+    height: calc(100vh - 70px);
+    /* Cálculo da altura da tela - a altura definida no top, utilizada para que o menu cubra toda a tela
+        100vh > Pega a altura da tela toda
+        60px > Altura definida no top no #menu
+        Se fosse utilizar só o 100vh, ele vai pegar a altura total da tela + o tamanho do top (nesse caso, 60px)
+        */
+    visibility: visible;
+    overflow-y: auto; /* Faz a barra de rolagem aparecer quando houver várias opções */
+  }
+
+  #btt_mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none; /* Tira a borda default do botão */
+    background: none; /* Tira o fundo todo do botão */
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  /* Desenha uma linha */
+  #icone {
+    width: 30px;
+    border-top: 4px solid;
+  }
+
+  /* after > Depois, before > Antes*/
+  #icone::after,
+  #icone::before {
+    content: ""; /* Sempre precisa de um content no after e before */
+    display: block; /* Para deixar o objeto depois do primeiro feito */
+    width: 30px;
+    height: 4px;
+    background-color: currentColor; /* Pega a cor que do elemento que está sendo copiado */
+    margin-top: 5px;
+    /* Para a animação */
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #navbar.active #icone {
+    border-top-color: transparent; /* Deixa o objeto transparente */
+  }
+
+  #navbar.active #icone::after {
+    transform: rotate(-140deg); /* rotate > rotaciona o objeto*/
+    top: -8px; /* O ponto de rotação é sempre no centro, sem essa medida ele iria rotacionar e não ficar alinhado com a posição do icone*/
+  }
+  #navbar.active #icone::before {
+    transform: rotate(140deg);
+  }
+
+  article a{
+    max-width: 20rem;
+  }
+
+  .grupo, .home{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .home{
+    justify-content: space-evenly;
+  }
+
+  .img_tipo{
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 481px){
+  .topo{
+    padding: 0;
+  }
+  .topo #logo{
+    margin: 0;
+  }
+
+  #form-local .title{
+    text-align: center;
+  }
+  .bloco div, #form-local section div {
+    max-width: 12rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .bloco div span, #form-local section div span{
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .bloco #excep span{
+    gap: 0.1rem;
+  }
+
+  .texto {
+    padding: 1rem;
+    gap: 0.3rem;
+    max-width: 16rem;
+  }
+  .texto h1{
+    font-size: 1.5rem;
+  }
+
+  .img_tipo{
+    width: 5rem;
+    height: 5rem;
+  }
+  .bloco_locais{
+    width: 90vw;
+    flex-flow: row wrap;
+    gap: 0;
+    justify-content: center;
+  }
+  .bloco_locais section{
+    align-items: center;
+    text-align: center;
+  }
+
+  #pesquisa, .retorna{
+    width: 95vw;
+  }
+}
+
+@media(max-width: 321px){
+  .grupo{
+    margin: 1rem;
+  }
+  .retorna{
+    top: 11.5rem;
+  }
+  .btt{
+    padding: 0.5rem;
+    width: 7rem;
+  }
+}
